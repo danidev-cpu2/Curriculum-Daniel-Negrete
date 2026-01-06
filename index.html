@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Daniel Negrete</title>
+    <link rel="stylesheet" href="styles/css/main.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dosis:wght@600;800&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navegación -->
+    <nav class="navegacion_top animacion-bajada">
+        <div class="enlaces-menu">
+            <a href="#formacion">Formación</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#sobre_mi">Sobre mí</a>
+            <a href="#contacto">Contacto</a>
+            <a href="assets/docs/Curriculum.pdf" class="enlace-icono">
+                <img src="assets/img/descarga.png" width="24" height="24" alt="descargar CV">
+            </a>
+
+        </div>
+    </nav>
+
+    <main class="contenedor-principal">
+
+        <!-- Sección Principal -->
+        <header class="seccion_principal centrar-todo">
+            <div class="texto_intro animacion-bajada">
+                <h1>¡Hola! Soy <span class="resaltado">Daniel</span></h1>
+
+                <p class="bio-texto animate-reveal">
+                    Actualmente estudio <strong>Desarrollo de Aplicaciones Web</strong> y lo que de verdad me mueve es
+                    el diseño de interfaces. Me encanta el proceso de transformar una idea en algo visual que sea
+                    intuitivo para todo el mundo.
+                </p>
+
+                <div class="btn">
+                    <a href="#contacto" class="boton boton-primario">Contactar</a>
+                    <a href="https://github.com/danidev-cpu" class="boton boton-borde">GitHub</a>
+                </div>
+            </div>
+
+            <div class="foto-grande animacion-bajada">
+                <div class="circulo_foto">
+                    <img src="assets/img/Foto-curriculum.png" alt="Foto de perfil de Daniel Negrete" loading="lazy">
+                </div>
+            </div>
+        </header>
+
+        <!-- Sección Formación -->
+        <section id="formacion" class="bloque_seccion">
+            <h2 class="titulo-seccion">Formación Académica</h2>
+            <div class="rejilla_tarjetas">
+                <div class="tarjeta">
+                    <h3>CFGS Desarrollo de Aplicaciones Web</h3>
+                    <p class="instituto">Instituto Tecnológico</p>
+                    <p class="fecha">2025 - Presente</p>
+                    <p class="desc">Especialización en desarrollo Frontend y Backend, bases de datos y despliegue.</p>
+                </div>
+                <div class="tarjeta">
+                    <h3>Grado Medio Informática</h3>
+                    <p class="instituto">IES ABASTOS</p>
+                    <p class="fecha">2022 - 2024</p>
+                    <p class="desc">Titulo de Grado Medio Informática</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Habilidades -->
+        <section id="habilidades" class="bloque_seccion">
+            <h2 class="titulo-seccion">Habilidades</h2>
+            <ul class="lista_habilidades">
+                <li>Maquetación avanzada con HTML5 y Sass</li>
+                <li>Diseño de interfaces intuitivas (UI/UX)</li>
+                <li>Creación de sitios web totalmente responsivos</li>
+                <li>Resolución creativa de problemas técnicos</li>
+                <li>Optimización de contenidos multimedia</li>
+            </ul>
+        </section>
+
+        <!-- Sección Experiencia -->
+        <section id="experiencia" class="bloque_seccion">
+            <h2 class="titulo-seccion">Experiencia & Proyectos</h2>
+
+            <ul class="linea-tiempo">
+                <li class="item-linea-tiempo">
+                    <div class="contenido-t">
+                        <h3>Prácticas FCT - Soporte</h3>
+                        <span class="fecha">Mayo 2024 - Junio 2024</span>
+                        <p>Soporte técnico y atención al cliente en empresa local.</p>
+                    </div>
+                </li>
+
+                <li class="item-linea-tiempo">
+                    <div class="contenido-t">
+                        <h3>Proyecto Portfolio Web</h3>
+                        <span class="fecha">Enero 2026</span>
+                        <p>Diseño y maquetación de portfolio personal responsive usando Sass.</p>
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&auto=format&fit=crop&q=60"
+                            alt="Captura de pantalla" class="foto-proyecto redondeada">
+                </li>
+                </div>
+            </ul>
+        </section>
+
+        <!-- Sección Multimedia: Video y Audio -->
+        <section id="sobre_mi" class="bloque_seccion caja_multimedia">
+
+            <div class="caja-media caja-video">
+                <h3 class="titulo-media"><i class="ph ph-video-camera"></i> Videocurriculum</h3>
+                <div class="video_youtube">
+                    <iframe src="https://youtu.be/iA7XYkYqfV8" title="Video de presentación" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+                <a class="redireccion" href="https://youtu.be/iA7XYkYqfV8">Si no va click aqui</a>
+            </div>
+
+            <div class="caja-media caja-audio">
+                <h3 class="titulo-media"><i class="ph ph-microphone"></i> Top 5 Lenguajes</h3>
+                <div class="contenedor-audio">
+                    <audio controls class="mi-audio">
+                        <source src="assets/audio/audiocurriculum.ogg" type="audio/ogg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                </div>
+                <p class="pie-foto">Mi experiencia personal (1 min).</p>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto" class="bloque_seccion zona_contacto">
+            <h2 class="titulo-seccion">Contacto</h2>
+            <p>¿Te ha gustado mi perfil? ¡Escríbeme!</p>
+            <a href="mailto:danneggom@alu.edu.gva.es" class="boton boton-primario boton-grande">Enviar Correo</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Daniel Negrete - Estudiante DAW</p>
+    </footer>
+
+</body>
+
+</html>

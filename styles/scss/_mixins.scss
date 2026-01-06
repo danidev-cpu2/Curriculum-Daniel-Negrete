@@ -1,0 +1,25 @@
+// _mixins.scss
+
+@mixin flex-centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin responder-a($breakpoint) {
+    @if $breakpoint ==tablet {
+        @media (min-width: $tablet) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==escritorio {
+        @media (min-width: $escritorio) {
+            @content;
+        }
+    }
+}
+
+@mixin sombra-tarjeta {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}

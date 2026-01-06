@@ -1,0 +1,32 @@
+// _variables.scss
+
+// Colores Principales
+$color-fondo: #d1f2eb;
+$color-primario: #1abc9c;
+$color-texto: #2c3e50;
+$color-texto-claro: #7f8c8d;
+$blanco: #ffffff;
+$redireccion: #1abc9c;
+
+// Colores de Acento
+$azul-acento: #5dade2;
+$fondo-tarjeta: rgba(255, 255, 255, 0.6);
+
+// Tipografía
+$fuente-principal: 'Poppins', sans-serif;
+$fuente-titulos: 'Dosis', sans-serif;
+
+// Espaciado
+$espacio-peque: 0.5rem;
+$espacio-medio: 1.5rem;
+$espacio-grande: 3rem;
+
+// Bordes
+$radio-peque: 10px;
+$radio-grande: 30px;
+$radio-circulo: 50%;
+
+// Puntos de ruptura (Breakpoints)
+$movil: 480px;
+$tablet: 768px;
+$escritorio: 1024px;

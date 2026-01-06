@@ -1,0 +1,371 @@
+@import 'variables';
+@import 'mixins';
+@import 'animations';
+
+// CONFIGURACIÓN GLOBAL
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $color-fondo;
+    font-family: $fuente-principal;
+    color: $color-texto;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.contenedor-principal {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+// NAVEGACIÓN 
+.navegacion_top {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    .enlaces-menu {
+        background: rgba(255, 255, 255, 0.85);
+        padding: 0.8rem 2.5rem;
+        border-radius: 50px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(10px);
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        a {
+            font-weight: 600;
+            font-size: 0.95rem;
+            position: relative;
+
+            &:hover {
+                color: $color-primario;
+                transform: translateY(-2px);
+            }
+        }
+
+    }
+}
+
+// SECCIÓN HERO (PRINCIPAL)
+.seccion_principal {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem 0;
+
+    @media (min-width: $tablet) {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .texto_intro {
+        flex: 1;
+
+        h1 {
+            font-family: $fuente-titulos;
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+
+            .resaltado {
+                color: $color-primario;
+            }
+        }
+
+        .bio-texto {
+            font-size: 1.2rem;
+            color: $color-texto-claro;
+            margin-bottom: 2rem;
+            max-width: 480px;
+        }
+
+        .btn {
+            display: flex;
+            gap: 1rem;
+        }
+    }
+
+    .foto-grande {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+
+        .circulo_foto {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 8px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 20px 40px rgba(26, 188, 156, 0.15);
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+// BLOQUES DE SECCIÓN COMPARTIDOS
+.bloque_seccion {
+    padding: 4rem 0;
+
+    .titulo-seccion {
+        font-family: $fuente-titulos;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: $color-primario;
+        border-left: 5px solid $azul-acento;
+        padding-left: 1rem;
+    }
+}
+
+// TARJETAS (FORMACIÓN)
+.rejilla_tarjetas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    @media (min-width: $tablet) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tarjeta {
+        background: white;
+        padding: 2rem;
+        border-radius: $radio-grande;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid transparent;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            border-color: rgba($color-primario, 0.3);
+        }
+
+        h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .instituto {
+            color: $color-primario;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .fecha {
+            color: #999;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+// HABILIDADES 
+.lista_habilidades {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding-left: 2rem;
+    font-size: 1.1rem;
+}
+
+// Estilo para el audio
+.audio-container {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: darken($color-fondo, 3%);
+    border-radius: 12px;
+    text-align: center;
+
+    audio {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+
+// LÍNEA DE TIEMPO (EXPERIENCIA)
+.linea-tiempo {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    margin-left: 1rem;
+}
+
+.item-linea-tiempo {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 2rem;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: -0.6rem;
+        top: 0.5rem;
+        width: 1rem;
+        height: 1rem;
+        background: $color-primario;
+        border-radius: 50%;
+    }
+
+    .foto-proyecto {
+        margin-top: 1rem;
+        border-radius: 10px;
+        max-width: 100%;
+        width: 300px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    }
+
+    .color-fecha {
+        font-size: 0.9rem;
+        color: #666;
+    }
+}
+
+// MULTIMEDIA
+.caja_multimedia {
+    display: grid;
+    gap: 2rem;
+
+    @media (min-width: $tablet) {
+        grid-template-columns: 1.5fr 1fr;
+    }
+
+    .caja-media {
+        background: $fondo-tarjeta;
+        padding: 2rem;
+        border-radius: 20px;
+        text-align: center;
+
+        .titulo-media {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            color: $color-texto;
+        }
+
+        .video_youtube {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            border-radius: 12px;
+            overflow: hidden;
+
+
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .mi-audio {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .redireccion {
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: $redireccion;
+            border-bottom: 1px solid $redireccion;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+
+        .pie-foto {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: $color-texto-claro;
+        }
+    }
+}
+
+// BOTONES
+.boton {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+
+
+
+
+}
+
+.boton-primario {
+    background-color: $color-primario;
+    color: white;
+    box-shadow: 0 4px 15px rgba(26, 188, 156, 0.4);
+
+}
+
+.boton-borde {
+    border-color: $color-texto;
+    color: $color-texto;
+
+    &:hover {
+        background-color: $color-texto;
+        color: white;
+    }
+}
+
+// ZONA CONTACTO
+
+.zona_contacto {
+    text-align: center;
+    background: rgba($color: #ffff, $alpha: 0.5);
+    border-radius: 30px;
+    margin-bottom: 2rem;
+
+    p {
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 3rem;
+    color: $color-texto-claro;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
