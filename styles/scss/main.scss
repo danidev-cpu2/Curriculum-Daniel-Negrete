@@ -2,7 +2,7 @@
 @import 'mixins';
 @import 'animations';
 
-// CONFIGURACIÓN GLOBAL
+
 * {
     margin: 0;
     padding: 0;
@@ -29,7 +29,7 @@ a {
     padding: 0 1.5rem;
 }
 
-// NAVEGACIÓN 
+
 .navegacion_top {
     display: flex;
     justify-content: center;
@@ -62,7 +62,7 @@ a {
     }
 }
 
-// SECCIÓN HERO (PRINCIPAL)
+
 .seccion_principal {
     min-height: 80vh;
     display: flex;
@@ -131,7 +131,7 @@ a {
     }
 }
 
-// BLOQUES DE SECCIÓN COMPARTIDOS
+
 .bloque_seccion {
     padding: 4rem 0;
 
@@ -145,7 +145,7 @@ a {
     }
 }
 
-// TARJETAS (FORMACIÓN)
+
 .rejilla_tarjetas {
     display: grid;
     grid-template-columns: 1fr;
@@ -187,7 +187,7 @@ a {
     }
 }
 
-// HABILIDADES 
+
 .lista_habilidades {
     padding: 0;
     display: grid;
@@ -197,22 +197,10 @@ a {
     font-size: 1.1rem;
 }
 
-// Estilo para el audio
-.audio-container {
-    margin-top: 3rem;
-    padding: 1.5rem;
-    background: darken($color-fondo, 3%);
-    border-radius: 12px;
-    text-align: center;
-
-    audio {
-        width: 100%;
-        max-width: 400px;
-    }
-}
 
 
-// LÍNEA DE TIEMPO (EXPERIENCIA)
+
+
 .linea-tiempo {
     list-style: none;
     padding: 0;
@@ -251,73 +239,8 @@ a {
     }
 }
 
-// MULTIMEDIA
-.caja_multimedia {
-    display: grid;
-    gap: 2rem;
-
-    @media (min-width: $tablet) {
-        grid-template-columns: 1.5fr 1fr;
-    }
-
-    .caja-media {
-        background: $fondo-tarjeta;
-        padding: 2rem;
-        border-radius: 20px;
-        text-align: center;
-
-        .titulo-media {
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            color: $color-texto;
-        }
-
-        .video_youtube {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            border-radius: 12px;
-            overflow: hidden;
 
 
-            iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
-        }
-
-        .mi-audio {
-            width: 100%;
-            margin-top: 1rem;
-        }
-
-        .redireccion {
-            display: inline-block;
-            margin-top: 1rem;
-            font-size: 0.85rem;
-            color: $redireccion;
-            border-bottom: 1px solid $redireccion;
-
-            &:hover {
-                opacity: 0.7;
-            }
-        }
-
-        .pie-foto {
-            margin-top: 1rem;
-            font-size: 0.9rem;
-            color: $color-texto-claro;
-        }
-    }
-}
-
-// BOTONES
 .boton {
     display: inline-block;
     padding: 0.8rem 2rem;
@@ -348,7 +271,7 @@ a {
     }
 }
 
-// ZONA CONTACTO
+
 
 .zona_contacto {
     text-align: center;
